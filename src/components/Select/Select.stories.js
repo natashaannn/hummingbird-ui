@@ -1,5 +1,5 @@
 import React from 'react';
-import { Select, ThemeProvider, InputLabel, MenuItem,FormControl } from '@mui/material';
+import { Select, ThemeProvider, InputLabel, MenuItem, FormControl, FormHelperText } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
 
 export default {
@@ -11,6 +11,9 @@ export default {
     },
     label : {
       control : 'text',
+    },
+    helperText : {
+        control : 'text',
     },
     size: {
       options: ['small', 'medium'],
@@ -33,14 +36,15 @@ export default {
 const Template = (args) =>
 <ThemeProvider theme={lightTheme}>
    
-    <FormControl variant={args.variant} sx={{ m: 1, minWidth: 120 }}>
-        <InputLabel>{args.label}</InputLabel>
+    <FormControl variant={args.variant} sx={{ m: 1, minWidth: 200 }}>
+        <InputLabel {...args}>{args.label}</InputLabel>
         <Select {...args}>  
           <MenuItem value=""> <em>None</em> </MenuItem>
-          <MenuItem value={10}>Ten</MenuItem>
-          <MenuItem value={20}>Twenty</MenuItem>
-          <MenuItem value={30}>Thirty</MenuItem>
+          <MenuItem value={1}>Placeholder</MenuItem>
+          <MenuItem value={2}>Placeholder 2</MenuItem>
+          <MenuItem value={3}>Placeholder 3</MenuItem>
         </Select>
+        <FormHelperText {...args}> {args.helperText}</FormHelperText>
     </FormControl>
 
 </ThemeProvider>;
@@ -53,6 +57,7 @@ Default.args = {
   variant:'filled',
   helperText: 'Helper Text',
   placeholder: 'Place Holder',
+  
   disabled : false,
   error: false,
 };
