@@ -8,7 +8,7 @@ export const switches = {
         MuiSwitch: {
             styleOverrides: {
                 root: { 
-                    '.Mui-disabled' : {color : neutrals[200]} ,
+                    '& .Mui-disabled' : {color : neutrals[200]} ,
                     '.MuiSwitch-colorPrimary': {
                         '&.Mui-focusVisible': {backgroundColor: alpha(primary[400],0.2)},
                         '&:hover': {backgroundColor: alpha(primary[400],0.1)},

@@ -4,9 +4,6 @@ export const icon = {
         MuiIconButton: {
             styleOverrides: {
                 root: { 
-                    // borderRadius: "50%",
-                    // padding : "5px",
-
                     "&.Mui-focusVisible": {
                         backgroundColor: secondary[400],
                     },

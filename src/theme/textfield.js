@@ -1,22 +1,15 @@
-//refer to https://mui.com/material-ui/customization/theme-components/
-//refer to https://mui.com/material-ui/react-switch/
-
-
 import { secondary } from "../style/Colors/Colors"
 
-export const checkbox = {
-  MuiCheckbox : {
+export const textfield = {
+  MuiTextField : {
       styleOverrides : {
         root : {
-          "&.Mui-focusVisible": {
-            backgroundColor: secondary[400],
-          },
-          '&:hover' : {
-            backgroundColor : secondary[100],
-          },
-          // '&:focus' : {
-          //   backgroundColor : 'black',
-          // }
+          // "&.Mui-focusVisible": {
+          //   backgroundColor: secondary[400],
+          // },
+          // '&:hover' : {
+          //   backgroundColor : "#E0E0E0",
+          // },
         },
       },
 
