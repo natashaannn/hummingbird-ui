@@ -4,6 +4,43 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 A design system created by SES. View the published storybook [here](https://6278e17325a15a004a7ecb09-znxvqpghxt.chromatic.com/?path=/story/usage--page)! 
 
+## Usage
+Install MUI with the following:
+```bash
+npm install @mui/material @emotion/react @emotion/styled
+```
+
+Install Hummingbird UI with the following command:
+```bash
+npm i hummingbird-ui
+```
+
+In your `App.js` file, import either the light theme or dark theme from the package.
+```javascript
+import { lightTheme } from 'hummingbird-ui';
+```
+
+In the same `App.js` file, import `ThemeProvider` and `CssBaseline` from the MUI Library.
+```javascript
+import { ThemeProvider, CssBaseline } from '@mui/material';
+```
+
+Wrap your code in the `ThemeProvider` and `CssBaseline` tags with the hummingbird-ui theme of choice.
+```javascript
+function App() {
+  return (
+    <ThemeProvider theme={ lightTheme }>
+      <CssBaseline/>
+        // Your code goes here
+    </ThemeProvider>
+  );
+}
+
+export default App;
+```
+
+The customized Hummingbird UI theme is now applied across all your MUI components. Enjoy!
+
 ## Chromatic
 Collaborators can access Chromatic via this [link](https://www.chromatic.com/builds?appId=6278e17325a15a004a7ecb09).
 

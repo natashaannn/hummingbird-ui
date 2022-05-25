@@ -27,6 +27,10 @@ export default {
       options : [ 'Default', 'Focus', 'Hover'],
       control : 'radio',
     },
+    color: {
+      options: ['primary', 'secondary','success','error','info','warning'],
+      control: { type: 'select' },
+    },
     disableRipple : {
       control : 'boolean',
     }
@@ -41,19 +45,22 @@ const Template = (args) =>
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Default.args = {
-    checked : false, 
-    disabled : false, 
-    label : '',
-    size : 'medium',
-    disableRipple : false, 
+  color : 'primary',
+  size : 'medium',
+  label : 'Label',
+  state : 'Default',
+  disabled : false ,
+  disableRipple : false,  
 };
 
 export const FocusState = Template.bind({});
 FocusState.args = {
-  checked : false,
-  disabled : false,
-  size: 'medium',
+  color : 'primary',
+  size : 'medium',
   label : 'Label',
+  state : 'Default',
+  disabled : false ,
+  disableRipple : false, 
   sx : {
     backgroundColor : secondary[400],
     '&:hover' : {
@@ -65,10 +72,12 @@ FocusState.args = {
 export const HoverState = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 HoverState.args = {
-  checked : true,
-  disabled : false,
-  size: 'medium',
+  color : 'primary',
+  size : 'medium',
   label : 'Label',
+  state : 'Default',
+  disabled : false ,
+  disableRipple : false,
   sx : {
     backgroundColor : secondary[100],
     '&:hover' : {

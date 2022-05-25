@@ -7,7 +7,7 @@
     "components",
     "ui"
   ],
-  "version": "1.0.0",
+  "version": "1.0.5",
   "license": "MIT",
   "private": false,
   "main": "dist/index.js",
@@ -21,13 +21,12 @@
     "url": "git+https://github.com/natashaannn/hummingbird-ui.git"
   },
   "resolutions": {
-    "**/@emotion/styled": "^11.0.0"
+    "**/@emotion/styled": "11.0.0"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.6.2",
+    "@emotion/react": "11.9.0",
+    "@emotion/styled": "11.8.1",
     "@mui/material": "^5.6.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
@@ -38,9 +37,13 @@
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
   },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "cross-env BABEL_ENV=production babel src -d dist",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -91,6 +94,10 @@
     "@storybook/testing-library": "0.0.10",
     "all-contributors-cli": "^6.20.0",
     "chromatic": "^6.5.4",
-    "webpack": "^5.72.0"
+    "file-loader": "^6.2.0",
+    "ttf-loader": "^1.0.2",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
   }
 }

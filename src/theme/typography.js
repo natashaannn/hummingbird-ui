@@ -1,5 +1,5 @@
-import '../style/Typography/Typography.css';
 import { createTheme } from '@mui/material/styles';
+// import '../style/Typography/Typography.css';
 
 let theme = createTheme();
 
