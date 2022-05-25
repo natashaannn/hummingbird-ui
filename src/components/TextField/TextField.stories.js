@@ -17,9 +17,6 @@ export default {
     helperText: {
       control : 'text',
     },
-    defaultValue: {
-      control : 'text',
-    },
     placeholder	: {
       control : 'text',
     },
@@ -46,18 +43,16 @@ const Template = (args) =>
     <TextField {...args} />
 
     {/* <TextField 
-        {...args} 
-        InputProps={{startAdornment: <InputAdornment position="start">$</InputAdornment>}}
+      InputProps={{startAdornment: <InputAdornment position="start">$</InputAdornment>}}
     />
 
     <TextField 
-        {...args} 
-        InputProps={{endAdornment: 
-            <InputAdornment position="end"> 
-                <IconButton> <Visibility/> </IconButton>
-            </InputAdornment>}}
+      InputProps={{endAdornment: 
+          <InputAdornment position="end"> 
+            <IconButton> <Visibility/> </IconButton>
+          </InputAdornment>
+        }}
     /> */}
-
 
 </ThemeProvider>;
 
