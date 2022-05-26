@@ -36,7 +36,7 @@ export default {
 const Template = (args) =>
 <ThemeProvider theme={lightTheme}>
    
-    <FormControl variant={args.variant} sx={{ m: 1, minWidth: 200 }}>
+    <FormControl {...args} variant={args.variant} sx={{ minWidth: 200 }}>
         <InputLabel {...args}>{args.label}</InputLabel>
         <Select {...args}>  
           <MenuItem value=""> <em>None</em> </MenuItem>

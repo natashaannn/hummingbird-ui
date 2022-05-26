@@ -10,10 +10,12 @@ import { lightcolorpalette, darkcolorpalette } from './colorpalette';
 import { radiobutton } from './radiobutton';
 import { checkbox } from './checkbox';
 import { textfield } from './textfield';
+import { select } from './select';
 import { fonts } from './fonts';
 
+
 // Theme overrides for components
-const components = { components: Object.assign({}, fonts, checkbox, switches, icon, radiobutton, textfield)};
+const components = { components: Object.assign({}, fonts, checkbox, switches, icon, radiobutton, textfield, select)};
 
 // Common settings across both light and dark themes
 const commonSettings = Object.assign({}, typography, components);
