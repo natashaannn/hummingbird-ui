@@ -56,7 +56,6 @@ Default.args = {
   label : 'Label',
   variant:'filled',
   helperText: 'Helper Text',
-  placeholder: 'Place Holder',
   
   disabled : false,
   error: false,
